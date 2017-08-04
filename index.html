@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BluetoothTester</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.0.1/color-thief.min.js"></script>
+  <script src="dist/DistLibLegacy.js"></script>
+  <script src="dist/DistLibBundle.js"></script>
+
+  <script src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <!-- 978884-656135-418264-367727 -->
+
+</head>
+
+<body class="HTML5-deploy-wrapper">
+
+  <div id="j_94" class="snapp-html5 rotatable element fc Screen" obj-name="ConfigScreen" style="background-color: rgb(255, 255, 255); background-image: url(https://snapp.click/api/v2/raws/projects/resources/d26c030c-654b-4a06-b150-2f188a6f730c); width: 375px; height: 667px; transform: translate(169px, 101px) rotate(0deg);">
+    <div></div>
+    <div id="j_95" class="snapp-html5 rotatable element fc Label" obj-name="BluetoothTesterLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 110px; height: 20px; transform: translate(120px, 20px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Bluetooth Tester
+" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 110px; text-overflow: clip; height: 20px; padding: inherit;">Bluetooth&nbsp;Tester<br></div>
+      </div>
+    </div>
+    <div id="j_96" class="snapp-html5 rotatable element fc Label" obj-name="IsBTAvailableLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 130px; height: 20px; transform: translate(20px, 70px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Bluetooth Available:" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 130px; text-overflow: clip; height: 20px; padding: inherit;">Bluetooth&nbsp;Available:</div>
+      </div>
+    </div>
+    <div id="j_97" class="snapp-html5 rotatable element fc Label" obj-name="IsBTAvailableFlag" style="background-color: rgba(255, 255, 255, 0.470588); opacity: 1; width: 150px; height: 20px; transform: translate(160px, 70px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 150px; text-overflow: clip; height: 20px; padding: inherit;"></div>
+      </div>
+    </div>
+    <div id="j_98" class="snapp-html5 rotatable element fc Label" obj-name="IsBTEnabledLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 130px; height: 20px; transform: translate(20px, 100px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Bluetooth Enabled:" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 130px; text-overflow: clip; height: 20px; padding: inherit;">Bluetooth&nbsp;Enabled:</div>
+      </div>
+    </div>
+    <div id="j_99" class="snapp-html5 rotatable element fc Label" obj-name="IsBTEnabledFlag" style="background-color: rgba(255, 255, 255, 0.470588); opacity: 1; width: 150px; height: 20px; transform: translate(160px, 100px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 150px; text-overflow: clip; height: 20px; padding: inherit;"></div>
+      </div>
+    </div>
+    <div id="j_100" class="snapp-html5 rotatable element fc Button" obj-name="GetPairedDevices" style="width: 175px; height: 40px; transform: translate(90px, 240px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Get Paired Devices</button>
+      <input
+        type="text" id="button_text"></div>
+    <div id="j_101" class="snapp-html5 rotatable element fc Button" obj-name="BTRequest" style="width: 175px; height: 40px; transform: translate(90px, 150px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Request to turn BT on</button>
+      <input
+        type="text" id="button_text"></div>
+    <div id="j_102" class="snapp-html5 rotatable element fc Label" obj-name="DevicesConnetedLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 130px; height: 20px; transform: translate(20px, 300px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Devices Connected:" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 130px; text-overflow: clip; height: 20px; padding: inherit;">Devices&nbsp;Connected:</div>
+      </div>
+    </div>
+    <div id="j_103" class="snapp-html5 rotatable element fc Label" obj-name="DevicesConnectedArea" style="background-color: rgba(255, 255, 255, 0.498039); opacity: 1; width: 310px; height: 200px; transform: translate(30px, 320px) rotate(0deg);">
+      <div class="label-wrapper">
+        <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: top; max-width: 310px; text-overflow: clip; height: 200px; padding: inherit;"></div>
+      </div>
+    </div>
+    <div id="j_104" class="snapp-html5 rotatable element fc Button" obj-name="TestBLE" style="width: 175px; height: 40px; transform: translate(90px, 530px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Test BLE</button>
+      <input
+        type="text" id="button_text"></div>
+  </div>
+  <div id="j_105" class="snapp-html5 rotatable element fc Screen" obj-name="BLE" style="background-color: rgb(255, 255, 255); background-image: url(https://snapp.click/api/v2/raws/projects/resources/d26c030c-654b-4a06-b150-2f188a6f730c); width: 375px; height: 667px; transform: translate(624px, 101px) rotate(0deg);">
+    <div></div>
+    <div id="j_106" class="snapp-html5 rotatable element fc Container" obj-name="BLEContainer" style="opacity: 1; background-color: rgba(247, 247, 247, 0); overflow-x: hidden; overflow-y: auto; width: 375px; height: 667px; transform: translate(0px, 0px); bottom: 20px;">
+      <div class="container"></div>
+      <div id="j_107" class="snapp-html5 rotatable element fc Label" obj-name="BLETesterTitle" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 140px; height: 20px; transform: translate(110px, 20px) rotate(0deg);">
+        <div class="label-wrapper">
+          <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="BLE Services Tester" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 140px; text-overflow: clip; height: 20px; padding: inherit;">BLE&nbsp;Services&nbsp;Tester</div>
+        </div>
+      </div>
+      <div id="j_108" class="snapp-html5 rotatable element fc Button" obj-name="ScanForBLE" style="width: 130px; height: 40px; transform: translate(50px, 70px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Scan for BLE</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_109" class="snapp-html5 rotatable element fc Button" obj-name="StopBLEScan" style="width: 130px; height: 40px; transform: translate(190px, 70px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Stop Scannig</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_110" class="snapp-html5 rotatable element fc Label" obj-name="DevicesFound" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 60px; height: 20px; transform: translate(35px, 158px) rotate(0deg);">
+        <div class="label-wrapper">
+          <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Devices" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 60px; text-overflow: clip; height: 20px; padding: inherit;">Devices</div>
+        </div>
+      </div>
+      <div id="j_111" class="rotatable element fc ListView" obj-name="DevicesListView" style="opacity: 1; background-color: rgba(255, 255, 255, 0.45098); width: 310px; height: 250px; transform: translate(30px, 180px) rotate(0deg);">
+        <div class="ListView"></div>
+        <div id="j_112" class="rotatable element fc ListViewCell" obj-name="DeviceListCell" style="opacity: 1; background-color: rgba(255, 255, 255, 0.478431); border-bottom-width: 2px; border-bottom-color: rgb(25, 104, 156); width: 310px; height: 40px; transform: translate(0px, 0px) rotate(0deg);">
+          <div class="ListViewCell"></div>
+          <div id="j_113" class="snapp-html5 rotatable element fc Label" obj-name="DeviceName" style="background-color: rgba(255, 255, 255, 0.478431); opacity: 1; width: 230px; height: 40px; transform: translate(0px, 0px) rotate(0deg);">
+            <div class="label-wrapper">
+              <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 230px; text-overflow: clip; height: 40px; padding: inherit;"></div>
+            </div>
+          </div>
+          <div id="j_114" class="snapp-html5 rotatable element fc Image" obj-name="SelectedImage" style="opacity: 1; background-color: rgba(255, 255, 255, 0); width: 40px; height: 40px; transform: translate(245px, 1px) rotate(0deg);"><img src="https://snapp.click/api/v2/raws/projects/resources/a13b811c-8bfb-4abc-9247-0d7943d88542" crossorigin="anonymous" onmousedown="return false;" scale-type="stretch" style="width: inherit; height: inherit;"></div>
+        </div>
+      </div>
+      <div id="j_115" class="snapp-html5 rotatable element fc Button" obj-name="Connect" style="width: 130px; height: 40px; transform: translate(50px, 440px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Connect</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_116" class="snapp-html5 rotatable element fc Button" obj-name="Disconnect" style="width: 130px; height: 40px; transform: translate(190px, 440px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Disconnect</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_117" class="snapp-html5 rotatable element fc Label" obj-name="ServicesLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 70px; height: 20px; transform: translate(35px, 530px) rotate(0deg);">
+        <div class="label-wrapper">
+          <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Services" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 70px; text-overflow: clip; height: 20px; padding: inherit;">Services</div>
+        </div>
+      </div>
+      <div id="j_118" class="rotatable element fc ListView" obj-name="ServicesListView" style="opacity: 1; background-color: rgba(255, 255, 255, 0.478431); width: 310px; height: 200px; transform: translate(30px, 549px) rotate(0deg);">
+        <div class="ListView"></div>
+        <div id="j_119" class="rotatable element fc ListViewCell" obj-name="ServiceListCell" style="opacity: 1; background-color: rgba(255, 255, 255, 0.498039); border-bottom-width: 2px; border-bottom-color: rgb(25, 104, 156); width: 310px; height: 40px; transform: translate(0px, 0px) rotate(0deg);">
+          <div class="ListViewCell"></div>
+          <div id="j_120" class="snapp-html5 rotatable element fc Label" obj-name="ServiceName" style="background-color: rgba(255, 255, 255, 0.509804); opacity: 1; width: 230px; height: 40px; transform: translate(0px, 0px) rotate(0deg);">
+            <div class="label-wrapper">
+              <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 230px; text-overflow: clip; height: 40px; padding: inherit;"></div>
+            </div>
+          </div>
+          <div id="j_121" class="snapp-html5 rotatable element fc Image" obj-name="ServiceSelectedImage" style="opacity: 1; background-color: rgba(255, 255, 255, 0); width: 40px; height: 40px; transform: translate(245px, -1px) rotate(0deg);"><img src="https://snapp.click/api/v2/raws/projects/resources/a13b811c-8bfb-4abc-9247-0d7943d88542" crossorigin="anonymous" onmousedown="return false;" scale-type="stretch" style="width: inherit; height: inherit;"></div>
+        </div>
+      </div>
+      <div id="j_122" class="snapp-html5 rotatable element fc Button" obj-name="GetServices" style="width: 175px; height: 40px; transform: translate(90px, 760px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Get Services</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_123" class="snapp-html5 rotatable element fc Label" obj-name="CharacteristicsLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 110px; height: 20px; transform: translate(35px, 850px) rotate(0deg);">
+        <div class="label-wrapper">
+          <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Characteristics" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 110px; text-overflow: clip; height: 20px; padding: inherit;">Characteristics</div>
+        </div>
+      </div>
+      <div id="j_124" class="rotatable element fc ListView" obj-name="CharteristicsListView" style="opacity: 1; background-color: rgba(255, 255, 255, 0.478431); width: 310px; height: 200px; transform: translate(33px, 870px) rotate(0deg);">
+        <div class="ListView"></div>
+        <div id="j_125" class="rotatable element fc ListViewCell" obj-name="CharacteristicListCell" style="opacity: 1; background-color: rgba(255, 255, 255, 0); border-bottom-width: 2px; border-bottom-color: rgb(25, 104, 156); width: 310px; height: 40px; transform: translate(0px, 0px) rotate(0deg);">
+          <div class="ListViewCell"></div>
+          <div id="j_126" class="snapp-html5 rotatable element fc Label" obj-name="CharacteristicName" style="background-color: rgba(255, 255, 255, 0.407843); opacity: 1; width: 230px; height: 40px; transform: translate(1px, -1px) rotate(0deg);">
+            <div class="label-wrapper">
+              <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 230px; text-overflow: clip; height: 40px; padding: inherit;"></div>
+            </div>
+          </div>
+          <div id="j_127" class="snapp-html5 rotatable element fc Image" obj-name="CharacteristicSelected" style="opacity: 1; background-color: rgba(255, 255, 255, 0); width: 40px; height: 40px; transform: translate(245px, 0px) rotate(0deg);"><img src="https://snapp.click/api/v2/raws/projects/resources/a13b811c-8bfb-4abc-9247-0d7943d88542" crossorigin="anonymous" onmousedown="return false;" scale-type="stretch" style="width: inherit; height: inherit;"></div>
+        </div>
+      </div>
+      <div id="j_128" class="snapp-html5 rotatable element fc Button" obj-name="GetCharacteristics" style="width: 175px; height: 40px; transform: translate(90px, 1080px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Get Characteristics</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_129" class="snapp-html5 rotatable element fc Label" obj-name="CharactersticsValueLabel" style="background-color: rgba(255, 255, 255, 0); opacity: 1; width: 130px; height: 20px; transform: translate(35px, 1170px) rotate(0deg);">
+        <div class="label-wrapper">
+          <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="Characteristic Value:" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 130px; text-overflow: clip; height: 20px; padding: inherit;">Characteristic&nbsp;Value:</div>
+        </div>
+      </div>
+      <div id="j_130" class="snapp-html5 rotatable element fc Label" obj-name="CharacteristicValue" style="background-color: rgba(255, 255, 255, 0.407843); opacity: 1; width: 150px; height: 20px; transform: translate(190px, 1170px) rotate(0deg);">
+        <div class="label-wrapper">
+          <div class="label wordwrap" id="cklabel" contenteditable="false" textformat="Plain Text" plain_text="" fontstyle="normal" style="font-size: 14px; font-family: Helvetica; font-style: normal; font-weight: normal; color: rgb(0, 0, 0); text-align: left; vertical-align: middle; max-width: 150px; text-overflow: clip; height: 20px; padding: inherit;"></div>
+        </div>
+      </div>
+      <div id="j_131" class="snapp-html5 rotatable element fc Button" obj-name="GetCharacteristicValue" style="width: 175px; height: 40px; transform: translate(90px, 1200px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Get Characteristic Value</button>
+        <input
+          type="text" id="button_text"></div>
+      <div id="j_132" class="snapp-html5 rotatable element fc Button" obj-name="AutoUpdate" style="width: 175px; height: 40px; transform: translate(90px, 1261px) rotate(0deg);"><button class="html5 btn" fontstyle="normal" style="opacity: 1; background-color: rgb(51, 181, 229); font-size: 14px; font-style: normal; font-weight: normal; color: rgb(255, 255, 255); text-align: center; background-image: url(https://snapp.click/builder/builder.html); font-family: Helvetica;">Auto Update Value</button>
+        <input
+          type="text" id="button_text"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
